@@ -14,7 +14,7 @@ $HOME/.cargo/bin" >> $HOME/.bashrc
 # anything else not listed here is in its the default installation directory
 
 # cleanup
-rm -rf $HOME/tmp \
+rm -rf $HOME/tmp/* \
 && sudo mv $APPSEC_SCRIPTS_DIR/check_versions.sh $HOME/ \
 && sudo apt-get autoremove \
 && sudo apt-get clean 
