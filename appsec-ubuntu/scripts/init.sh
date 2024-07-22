@@ -8,4 +8,5 @@ mkdir ${APPSEC_USER_HOME}/tools
 sudo apt-get update -y \
 && sudo apt-get install -y git wget curl unzip \
 && sudo apt-get install -y tar file \
-&& sudo apt-get clean
+&& sudo apt-get clean \
+&& sudo chown -R $APPSEC_USER:$APPSEC_GROUP ${APPSEC_SCRIPTS_DIR}/*

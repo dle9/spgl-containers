@@ -15,9 +15,6 @@ $HOME/.cargo/bin" >> $HOME/.bashrc
 
 # cleanup
 rm -rf $HOME/tmp \
-&& rmdir $HOME/tmp \
-&& sudo mv /scripts/check_versions.sh $HOME/ \
-&& sudo rm -rf /scripts \
-&& sudo rmdir /scripts \
+&& sudo mv $APPSEC_SCRIPTS_DIR/check_versions.sh $HOME/ \
 && sudo apt-get autoremove \
 && sudo apt-get clean 
