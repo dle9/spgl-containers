@@ -10,7 +10,7 @@ EXTRACT_FOLDER = 'extracted'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['EXTRACT_FOLDER'] = EXTRACT_FOLDER
 
-@app.route('/upload', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def upload_and_process():
     if request.method == "POST":
         if 'file' not in request.files:
@@ -51,4 +51,4 @@ def upload_and_process():
 if __name__ == '__main__':
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
     os.makedirs(EXTRACT_FOLDER, exist_ok=True)
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

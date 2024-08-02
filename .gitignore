@@ -6,3 +6,8 @@ uploads/*
 uploads/**
 extracted/**
 extracted/*
+**/uploads
+**/extracted
+.env
+**/.env
+**/*/.env

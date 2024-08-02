@@ -14,7 +14,12 @@ $HOME/.cargo/bin" >> $HOME/.bashrc
 # anything else not listed here is in its the default installation directory
 
 # cleanup
+# && sudo rm -rf $APPSEC_SCRIPTS_DIR/ \
 rm -rf $HOME/tmp/* \
 && sudo mv $APPSEC_SCRIPTS_DIR/check_versions.sh $HOME/ \
+&& sudo cp -r $APPSEC_SCRIPTS_DIR/app/* $APPSEC_APP_DIR \
+&& sudo chown -R $APPSEC_USER:$APPSEC_GROUP $APPSEC_APP_DIR/* \
+&& sudo mkdir -p $APPSEC_APP_DIR/templates \
+&& sudo mv $APPSEC_APP_DIR/*.html $APPSEC_APP_DIR/templates \
 && sudo apt-get autoremove \
 && sudo apt-get clean 
