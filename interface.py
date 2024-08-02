@@ -36,7 +36,7 @@ def upload_and_process():
 
             # perform commands on extracted files
             try:
-                result = subprocess.run(['powershell.exe', 'ls', extract_path], capture_output=True, text=True, check=True)
+                result = subprocess.run(['ls', extract_path], capture_output=True, text=True, check=True)
                 ls_output = result.stdout
             except subprocess.CalledProcessError as e:
                 return jsonify({'error': f'Error executing dir command: {str(e)}'}), 500
