@@ -52,7 +52,7 @@ RUN ${APPSEC_SCRIPTS_DIR}/init.sh \
     # paket, <more dotnet stuff here>
     && ${APPSEC_SCRIPTS_DIR}/install-dotnet-stuff.sh 8.0.0 \
 
-    ### python, pip, pipenv
+    ### python, pip, pipenv 
     && ${APPSEC_SCRIPTS_DIR}/install-python.sh \
     # poetry <more pip packages here>
     && ${APPSEC_SCRIPTS_DIR}/install-pip-packages.sh \ 
